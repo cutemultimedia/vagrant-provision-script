@@ -1,7 +1,7 @@
 # vagrant-provision-script
 	- Automatic vagrant provisioning script
 # example
-	sh implement.sh --title MyVagrantBox
+	sh provision.sh --title MyVagrantBox
 # parameters
 	--title = Name of the vagrant box
 	--url = URL of the base box
