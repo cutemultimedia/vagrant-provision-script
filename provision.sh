@@ -49,10 +49,10 @@ VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.box = \"$VAGRANT_TITLE\"\n"
 VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.network :public_network\n"
 VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.synced_folder \"$VAGRANT_SYNCED_FOLDER_FROM\", \"$VAGRANT_SYNCED_FOLDER_TO\", create:true\n"
 
-VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/update.sh\"\n"
-VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/apache2.sh\"\n"
-VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/php5.sh\"\n"
-VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/etc.sh\"\n"
+VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/provision/update.sh\"\n"
+VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/provision/apache2.sh\"\n"
+VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/provision/php5.sh\"\n"
+VAGRANT_CONFIG="$VAGRANT_CONFIG\tconfig.vm.provision \"shell\", path: \"$PROJECT_FOLDER/vagrant-provision-script/provision/etc.sh\"\n"
 
 VAGRANT_CONFIG="$VAGRANT_CONFIG end\n"
 
