@@ -4,10 +4,10 @@ echo "==================== Provisioning script starting ==================== "
 
 PROVISION_SOURCE_REPO_INSTALLERS="https://github.com/ersongit/vagrant-provision-script.git"
 
+ROOT_VAGRANT_FOLDER="$HOME/vagrant"
 TIME_STAMP=$(date +%s)
 VAGRANT_TITLE="provision-$TIME_STAMP"
-
-PROJECT_FOLDER="/var/www/html/$VAGRANT_TITLE"
+PROJECT_FOLDER="$ROOT_VAGRANT_FOLDER/$VAGRANT_TITLE"
 
 VAGRANT_URL="https://dl.dropboxusercontent.com/u/100138133/vagrant/fresh-ubuntu-14-04.box"
 VAGRANT_SYNCED_FOLDER_FROM="$PROJECT_FOLDER/vagrant-provision-script"
@@ -28,6 +28,9 @@ while [ "$1" != "" ]; do
 		esac
 	shift
 done
+
+mkdir "$ROOT_VAGRANT_FOLDER"
+mkdir "$PROJECT_FOLDER"
 
 echo "Vagrant Box Name : $VAGRANT_TITLE"
 echo "Vagrant Base Box File : $VAGRANT_URL"
